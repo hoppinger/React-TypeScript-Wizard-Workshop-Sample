@@ -57,7 +57,7 @@ export class Wizard extends React.Component<WizardProps, WizardState> {
                       setValue={(n,c) => this.setState({...this.state, name:n}, c) }
                       moveNext={() => {
                         if (this.state.step != 1) return
-                        let new_state:WizardState = {...this.state, step:2, first:0 }
+                        let new_state:WizardState = {...this.state, step:2, first: 0 }
                         this.setState(new_state)
                         } } />
         : this.state.step == 2 ?
@@ -65,15 +65,26 @@ export class Wizard extends React.Component<WizardProps, WizardState> {
                       setValue={(v,c) => this.setState({...this.state, first:v}, c)}
                       moveNext={() => {
                         if (this.state.step != 2) return
-                        let new_state:WizardState = {...this.state, step:3, second:0 }
+                        let new_state:WizardState = {...this.state, step:3, second: 0 }
                         this.setState(new_state)
-                        } } />
+                        } } 
+                      moveBack={() => {
+                        if (this.state.step != 2) return
+                        let new_state:WizardState = {...this.state, step:1, name: '' }
+                        this.setState(new_state)
+                        } }
+                      />
         : this.state.step == 3 ?
            <SelectNumber value={this.state.second}
                       setValue={(v,c) => this.setState({...this.state, second:v}, c)}
                       moveNext={() => {
                         if (this.state.step != 3) return
                         let new_state:WizardState = {...this.state, step:4 }
+                        this.setState(new_state)
+                        } } 
+                      moveBack={() => {
+                        if (this.state.step != 3) return
+                        let new_state:WizardState = {...this.state, step:2, first:0 }
                         this.setState(new_state)
                         } } />
         :

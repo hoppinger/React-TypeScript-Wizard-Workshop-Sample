@@ -3,7 +3,7 @@ import * as ReactDOM from "react-dom"
 import * as Immutable from "immutable"
 import * as Api from './api'
 
-export type SelectNumberProps = { value:number, setValue:(new_value:number,callback?:()=>void)=>void, moveNext:() => void }
+export type SelectNumberProps = { value: number, setValue: (new_value: number, callback?: () => void) => void, moveNext: () => void, moveBack: () => void }
 export type SelectNumberState = { available_numbers:"loading"|Immutable.List<number>, selection:undefined|number }
 export class SelectNumber extends React.Component<SelectNumberProps, SelectNumberState> {
   constructor(props:SelectNumberProps, context:any) {
@@ -28,6 +28,8 @@ export class SelectNumber extends React.Component<SelectNumberProps, SelectNumbe
            </select>
           <button disabled={!this.state.available_numbers.some(n => n == this.props.value)}
                   onClick={() => this.props.moveNext()}>Next</button>
+          
+          <button onClick={() => this.props.moveBack()}>Back</button>
         </div>
  }
 }
