@@ -5,8 +5,17 @@ folder.
 
 
 # Running
-Run the web server with: ```node_modules/.bin/http-server ./wwwroot -p 5000```
-Run webpack with: ```node_modules/.bin/webpack -w```
+Run the web server with: 
+
+```bash
+node_modules/.bin/http-server ./wwwroot -p 5000
+```
+ 
+Run webpack with: 
+
+```bash
+node_modules/.bin/webpack -w
+```
 
 
 # Modifying the application
