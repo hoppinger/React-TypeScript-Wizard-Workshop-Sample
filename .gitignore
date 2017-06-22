@@ -280,3 +280,5 @@ __pycache__/
 
 !project_template/Controllers/Generated
 !project_template/Controllers/Generated/empty.txt
+
+yarn.lock
