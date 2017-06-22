@@ -13,6 +13,8 @@
 *.js.map
 *.js
 
+!webpack.config.js
+
 *generated*
 
 # Build results
