@@ -264,6 +264,9 @@ paket-files/
 .idea/
 *.sln.iml
 
+# Webpack
+!webpack.config.js
+
 # CodeRush
 .cr/
 
@@ -280,5 +283,3 @@ __pycache__/
 
 !project_template/Controllers/Generated
 !project_template/Controllers/Generated/empty.txt
-
-yarn.lock
