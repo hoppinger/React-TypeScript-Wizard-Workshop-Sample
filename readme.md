@@ -5,16 +5,16 @@ folder.
 
 
 # Running
-Run the web server with: 
+Run the web server with:
 
 ```bash
-node_modules/.bin/http-server ./wwwroot -p 5000
+npm run be
 ```
- 
-Run webpack with: 
+
+Run webpack with:
 
 ```bash
-node_modules/.bin/webpack -w
+npm run wp
 ```
 
 

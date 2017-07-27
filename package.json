@@ -6,7 +6,8 @@
     "npm": "3.5.0"
   },
   "scripts": {
-    "build": "./node_modules/.bin/webpack -w",
+    "be": "node_modules/.bin/http-server ./wwwroot -p 5000",
+    "wp": "./node_modules/.bin/webpack -w",
     "stylesheets": "gulp"
   },
   "dependencies": {
